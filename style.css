@@ -1,0 +1,2895 @@
+@import url('https://fonts.googleapis.com/earlyaccess/mplus1p.css');
+
+/* -----------------------------------------
+
+  Goope Style / Antique
+  2015.09.30  GMO pepabo
+
+----------------------------------------- */
+
+/*------------------------------------------
+ パーツ表示切替用style
+------------------------------------------*/
+.site_description {
+  width: 100%;
+  line-height: 22px;
+  text-align: center;
+}
+.shop_name {
+  margin-bottom: 8px;
+}
+
+.shop_tel {
+}
+
+.shop_rss {
+  display: none;
+  margin: 4px 0 0 5px;
+}
+.today_area {
+  float: none;
+}
+.qr_area {
+  display: none;
+}
+.counter_area {
+  display: none;
+  float: none;
+}
+.copyright {
+}
+.powered {
+  display: none;
+}
+
+
+/* --------------------------------------
+
+  共通項目
+
+--------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  }
+
+input[type="button"],input[type="submit"] {
+    -webkit-appearance: none;
+  }
+body {
+  color: #3a3329;
+  font-size: 14px;
+  font-family: 'Mplus 1p';
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  word-wrap: break-word;
+  word-break: break-all;
+  width: 100%;
+  background: #fff url(/img/theme_antique/antique_bg_01.png);
+  background-size: 250px 309px;
+  -webkit-background-size: 250px 309px;
+  -moz-background-size: 250px 309px;
+}
+
+
+ul {
+  list-style: none;
+}
+
+a:link {
+  color: #3a3329;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #3a3329;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8b0c0c;
+  text-decoration: none;
+  }
+
+a:active {
+  color: #8b0c0c;
+  text-decoration: none;
+  outline: none;
+}
+
+a.link_white:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.link_white:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.link_white:hover {
+  color: #fff;
+  text-decoration: none;
+  }
+
+a.link_white:active {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+
+/*-- ホバーでゆっくり色が変わる --*/
+
+a {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  -ms-transition: 0.6s;
+  transition: 0.6s;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+h3 {
+  color: #3a3329;
+  text-align: center;
+  font-size: 18px;
+  background-image: url(/img/theme_antique/antique_contents_title_line_1.png),url(/img/theme_antique/antique_contents_title_line_2.png);
+  background-repeat:no-repeat, no-repeat;
+  background-position: left top,left bottom;
+  background-size: contain;
+  margin: 0;
+  padding: 20px 0 30px;
+  position: relative;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.page_title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+/*-- clear --*/
+
+br.clear {
+  font-size: 0;
+  line-height: 0;
+  clear: both;
+  }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+/*-- color --*/
+
+.main_color {
+  color: #3F260D;
+}
+
+.white {
+  color: #fff;
+}
+
+/*-- border --*/
+
+.border_radius {
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+}
+
+.border_solid {
+  border: 1px #3F260D solid;
+}
+
+.border_bottom_solid {
+  padding: 0 0 3px 0;
+  border-bottom: 1px #3F260D solid;
+}
+
+/*-- text --*/
+
+.font_12 {
+  font-size: 12px;
+}
+
+.font_16 {
+  font-size: 16px;
+}
+
+.font_18 {
+  font-size: 18px;
+}
+
+.font_20 {
+  font-size: 20px;
+}
+
+.font_30 {
+  font-size: 30px;
+}
+
+.font_40 {
+  font-size: 40px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/*-- margin --*/
+
+.mar_btm_5 {
+  margin: 0 0 5px 0;
+}
+
+.mar_btm_10 {
+  margin: 0 0 10px 0;
+}
+
+.mar_btm_20 {
+  margin: 0 0 20px 0;
+}
+
+.mar_btm_30 {
+  margin: 0 0 30px 0;
+}
+
+.mar_btm_40 {
+  margin: 0 0 40px 0;
+}
+
+.mar_btm_50 {
+  margin: 0 0 50px 0;
+}
+
+/*-- padding --*/
+
+.pad_20 {
+  padding: 20px;
+}
+
+.pad_btm_10 {
+  padding: 0 0 10px 0;
+}
+
+.pad_btm_20 {
+  padding: 0 0 20px 0;
+}
+
+.pad_btm_30 {
+  padding: 0 0 30px 0;
+}
+
+.pad_btm_40 {
+  padding: 0 0 40px 0;
+}
+
+.pad_btm_50 {
+  padding: 0 0 50px 0;
+}
+
+/*-- img --*/
+.info_photo img,
+.menu_photo img,
+.photo_image img,
+.coupon_image img,
+.schedule_detail_body img {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid #fff;
+  margin-left: -3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px 3px;
+}
+
+
+/*-- center --*/
+.center {
+  text-align: center;
+}
+
+/*-- table --*/
+@media screen and (max-width: 640px) {
+  table {
+    width: 100% !important;
+  }
+}
+
+/*-- ホバーで画像がゆっくり透過 --*/
+.fade {
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.fade:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  -ms-filter: "alpha(opacity=70)"; /* IE 8 */
+}
+
+.pager {
+  text-align: center;
+  white-space: nowrap;
+  padding: 5px 0;
+  margin: 30px 0 0 0;
+  font-size: 20px;
+  line-height: 16px;
+}
+
+.pager a {
+  margin: 0 2px;
+  padding: 5px 8px;
+  color: #3F260D;
+  text-decoration: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+}
+
+.pager a:hover{
+  color: #fff;
+  background: #5c5c55;
+}
+
+.pager a.chk {
+  margin: 0 2px;
+  padding: 5px 8px;
+  color: #fff;
+  text-decoration: none;
+  background: #5c5c55;
+}
+
+@media screen and (max-width: 640px) {
+
+  h3 {
+    padding: 10px 0 15px;
+  }
+
+  table {
+    width: 100% !important;
+  }
+}
+
+/* ---------------------------------
+
+メインパーツ
+
+--------------------------------- */
+
+/* -----------------------------------------
+PC
+----------------------------------------- */
+
+#container {
+  background-image: url(/img/theme_antique/antique_bg_02-2.png);
+  background-repeat: repeat-y;
+  background-size: 1236px 422px;
+  -webkit-background-size: 1236px 422px;
+  -moz-background-size: 1236px 422px;
+  background-position: center top;
+}
+
+#wrapper {
+  width: 1000px;
+  margin: -100px auto 0;
+}
+
+#header {
+  width: 1000px;
+  padding: 0 0 40px;
+  position: relative;
+}
+
+#main {
+  width: 705px;
+  float: right;
+  background-image: url(/img/theme_antique/antique_main_bg_top.png),url(/img/theme_antique/antique_main_bg_bottom.png);
+  background-repeat:no-repeat, no-repeat;
+  background-position: left top,left bottom;
+  background-size: contain;
+  z-index: 1000;
+  padding: 48px 0 50px;
+  position: relative;
+}
+
+#contents {
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 40;
+}
+
+.main_inner {
+  position: relative;
+  background-image: url(/img/theme_antique/antique_main_bg_middle.png);
+  background-repeat:repeat-y;
+  background-size: 100%;
+  padding: 30px 40px 110px;
+}
+
+#top .main_inner {
+  padding: 0 40px 90px;
+}
+
+#free .main_inner {
+  padding: 30px 60px 110px;
+}
+
+#side {
+  float: left;
+  width: 280px;
+  margin: 0 15px 0 0;
+  position: relative;
+  z-index: 1001;
+}
+
+#navi {
+  padding: 142px 0 244px;
+  margin: 0 0 40px 0;
+  background-image: url(/img/theme_antique/antique_sidenavi_top.png),url(/img/theme_antique/antique_sidenavi_bottom.png);
+  background-repeat:no-repeat, no-repeat;
+  background-position: left top,left bottom;
+  background-size: 273px 142px,273px 244px;
+  -webkit-background-size: 273px 142px,273px 244px;
+  -moz-background-size: 273px 142px,273px 244px;
+  position: relative;
+  z-index: 1000;
+}
+
+#navi:before {
+  content: ' ';
+  display: block;
+  width: 193px;
+  height: 282px;
+  background: transparent url(/img/theme_antique/antique_green_01.png) 0 0 no-repeat;
+  background-size: 193px 282px;
+  position: absolute;
+  left: -55px;
+  top: -20px;
+  z-index: 1002;
+}
+
+#navi_parts {
+  margin: 20px 0;
+}
+
+#navi_parts img {
+  max-width: 260px;
+  text-align: center;
+}
+
+#footer {
+  background: url(/img/theme_antique/antique_footer_bg_02.png);
+  background-size:1335px 350px;
+  -webkit-background-size: 1335px 350px;
+  -moz-background-size: 1335px 350px;
+  padding: 30px 0 20px 0;
+  margin: 0 0 0 0;
+}
+
+
+/* -----------------------------------------
+タブレット
+----------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+  #wrapper {
+    width: 100%;
+  }
+
+  #header {
+    width: 100%;
+    padding: 40px 0;
+  }
+
+  #main {
+    width: 95%;
+    float: none;
+    padding: 6.4% 0 6.7%;
+    margin: 0 auto 40px;
+  }
+
+  #side {
+    float: none;
+    margin: 0 auto;
+  }
+
+  #navi {
+    display: none;
+    padding: 0 23px;
+  }
+
+  #navi:before {
+    content: none;
+  }
+
+  #navi_parts {
+    margin: 20px 0;
+  }
+}
+
+/* -----------------------------------------
+スマートフォン
+----------------------------------------- */
+
+@media screen and (max-width: 640px) {
+
+  #wrapper {
+    width: 100%;
+  }
+
+  #header {
+    width: 100%;
+    padding: 40px 0 30px;
+  }
+
+  #main {
+    padding: 6.3% 0 6.7%;
+    width: 95% !important;
+    float: none;
+  }
+
+  .main_inner {
+    padding: 20px 8% 100px;
+  }
+
+  #top .main_inner {
+  padding: 0 20px 90px;
+}
+
+  #free .main_inner {
+    padding: 30px 20px 110px;
+  }
+
+  #navi {
+    display: none;
+    padding: 0 23px;
+  }
+
+  #navi_parts {
+    text-align: center;
+  }
+}
+
+/* --------------------------------------
+
+  ヘッダー
+
+  --------------------------------------- */
+
+/* -----------------------------------------
+PC
+----------------------------------------- */
+
+.top_line {
+  height: 194px;
+  width:100%;
+  position: relative;
+  overflow: hidden;
+  background: url(/img/theme_antique/antique_header_wood.png) repeat-x;
+  background-size: 700px 70px;
+  -webkit-background-size: 700px 70px;
+  -moz-background-size: 700px 70px;
+  position: relative;
+}
+
+.antique_header_ivy {
+  position: absolute;
+  width: 436px;
+  height: 194px;
+  left: 10%;
+}
+
+.site_title {
+  margin: 40px auto 40px;
+  line-height: 50px;
+  width: 600px;
+}
+
+.site_title img {
+  width: auto;
+  max-width: 700px;
+  margin: -50px 0 0;
+}
+
+.site_description {
+  width: 600px;
+  line-height: 22px;
+}
+
+h1.site_logo {
+  font-size: 40px;
+  margin: 0 auto 10px;
+  max-width: 90%;
+}
+
+.shop_name {
+  margin-bottom: 8px;
+}
+
+.shop_title {
+  display: none;
+}
+
+.site_description_mobile {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#mobile-bar {
+  display: none;
+}
+
+.tel_area {
+  width: 100%;
+  position: relative;
+  top: -88px;
+  margin: 0 auto;
+}
+
+.tel_area img {
+  margin: 0 10px 0 0;
+}
+
+.tel_mail {
+  float: right;
+}
+
+.tel_number {
+  margin: 0;
+  font-size: 16px;
+  float: right;
+}
+
+.tel_number a:link,
+.tel_number a:visited,
+.tel_number a:hover,
+.tel_number a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+.shop_tel_link {
+  cursor: default;
+}
+
+@media screen and (max-width: 480px) {
+  .shop_tel_link {
+    cursor: pointer;
+  }
+}
+
+.tel_area_mail {
+  font-weight: bold;
+  text-align: center;
+  height: 62px;
+  line-height: 62px;
+  padding:  0;
+  display: block;
+  cursor: pointer;
+  float: right;
+  font-size: 16px;
+  height: 100%;
+  line-height: 100%;
+  margin: 0 30px 0 0;
+  width: auto;
+}
+
+.tel_area_mail_txt:hover {
+  opacity: 0.7;
+  -moz-opacity: 70;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a.tel_area_mail {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.tel_area a.tel_area_mail_mobile {
+  color: #324e9b;
+}
+
+.tel_area_mail_mobile {
+  display: none;
+}
+
+.fa-envelope-o {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+h1.site_logo {
+  max-width: 100%;
+  font-size: 40px;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+}
+
+.shop_title {
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  padding: 5px 10px;
+  text-align: right;
+
+  margin: 0 auto;
+  text-align : center;
+  display: block;
+  float: none;
+  width: 100%;
+}
+
+.tel_number i {
+  font-size: 25px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.gnav_smart_phone {
+  display: none;
+}
+
+/* -----------------------------------------
+タブレット
+----------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+  .top_line {
+    height: 100px;
+  }
+
+  .antique_header_ivy {
+    display: none;
+  }
+
+  .tel_area {
+    width: 95%;
+    position: relative;
+    top: -25px;
+    margin: 0 auto;
+  }
+
+  .tel_area img {
+    width: 30px
+  }
+
+  .tel_mail {
+    margin: 0 0 0 0;
+  }
+
+  #mobile-bar {
+    display: block;
+    float: left;
+    font-size: 25px;
+    margin: 0 0 0 0;
+  }
+
+  .tel_number {
+    font-size: 12px;
+    float: right;
+  }
+
+  .tel_area_mail {
+    float: right;
+    background: none;
+    height: 100%;
+    line-height: 100%;
+    margin: 0 20px 0 0;
+    width: auto;
+  }
+
+  a.tel_area_mail {
+    color: #3F260D;
+  }
+
+  .site_title {
+    margin: 80px auto 20px;
+    text-align : center;
+    display: block;
+    float: none;
+    width: 100%;
+  }
+
+  .site_title img {
+    max-width: 100%;
+  }
+
+  .site_description {
+    text-align: center;
+    width: 100%;
+  }
+
+  h1.site_logo {
+    margin: 0 auto 10px;
+    max-width: 90%;
+  }
+
+  .shop_name {
+    margin-bottom: 8px;
+  }
+
+  .shop_title {
+    display: none;
+  }
+
+  .site_description_mobile {
+    width: 90%;
+    margin: 0 auto;
+    width: 96%;
+    position: relative;
+  }
+
+  .gnav_smart_phone {
+    display: block;
+    margin: 20px;
+    width: 180px
+  }
+
+  #build-menu {
+    visibility: visible;
+    z-index: 0;
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    -ms-transform: none;
+    transform: none;
+    display: none;
+    width: 260px;
+    padding: 0;
+    position: static;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    background-image: url(/img/theme_antique/antique_bg_02-2.png);
+    background-repeat: repeat-y;
+    background-size: 1236px 422px;
+    -webkit-background-size: 1236px 422px;
+    -moz-background-size: 1236px 422px;
+    background-position: center top;
+  }
+
+  .build-menu-animating #build-menu-page {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+  }
+
+  .build-menu-animating .ua-android-u440 {
+  overflow-x: hidden;
+  }
+
+  .build-menu-animating .ua-android-u440 #build-menu-page {
+  position: absolute !important;
+  }
+
+  .build-menu-animating.build-menu-close #build-menu-page,
+  .build-menu-animating.build-menu-open #build-menu-page {
+    -webkit-transition: -webkit-transform 250ms;
+    -moz-transition: -moz-transform 250ms;
+    -o-transition: -o-transform 250ms;
+    -ms-transition: -ms-transform 250ms;
+    transition: transform 250ms;
+  }
+
+  .build-menu-animating.build-menu-open #build-menu-page {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .build-menu-animating #build-menu {
+    display: block
+  }
+
+  .build-menu-open #build-menu {
+    display: block;
+    -webkit-transition-delay: 0ms, 0ms, 0ms;
+    -moz-transition-delay: 0ms, 0ms, 0ms;
+    -o-transition-delay: 0ms, 0ms, 0ms;
+    -ms-transition-delay: 0ms, 0ms, 0ms;
+    transition-delay: 0ms, 0ms, 0ms;
+  }
+
+  .build-menu-open #build-menu,
+  .build-menu-close #build-menu {
+    -webkit-transition: -webkit-transform 250ms, opacity 250ms, visibility 0ms 250ms;
+    -moz-transition: -moz-transform 250ms, opacity 250ms, visibility 0ms 250ms;
+    -o-transition: -o-transform 250ms, opacity 250ms, visibility 0ms 250ms;
+    -ms-transition: -ms-transform 250ms, opacity 250ms, visibility 0ms 250ms;
+    transition: transform 250ms, opacity 250ms, visibility 0ms 250ms;
+  }
+
+  #build-menu-button {
+    display: block;
+  }
+
+  a#build-menu-button {
+    color: #fff;
+  }
+
+  #build-menu-button div {
+    height: 5px;
+    width: 30px;
+  }
+}
+
+/* -----------------------------------------
+スマートフォン
+----------------------------------------- */
+
+@media screen and (max-width: 640px) {
+
+  .site_title {
+    margin: 30px auto 0px;
+    text-align : center;
+    display: block;
+    float: none;
+  }
+
+  h1.site_logo img{
+    margin: 0 auto 10px;
+    max-width: 90%;
+  }
+
+  .tel_area_mail {
+    margin: 0 10px 0 0;
+    font-size: 12px;
+  }
+
+  .shop_name {
+    margin-bottom: 8px;
+  }
+
+  .shop_title {
+    display: none;
+  }
+
+  .site_description_mobile {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* --------------------------------------
+
+  メイン
+
+--------------------------------------- */
+
+.antique_paper_top_green_right {
+  position: absolute;
+  top: -83px;
+  right: -70px;
+  z-index: 9999;
+  width: 277px;
+}
+
+.antique_paper_bottom_green_left {
+  position: absolute;
+  bottom: -28px;
+  left: -33px;
+  z-index: 9999;
+  width: 250px;
+}
+
+.antique_paper_bottom_bird {
+  position: absolute;
+  bottom: 45px;
+  right: 40px;
+  z-index: 9999;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .antique_paper_top_green_right {
+    position: absolute;
+    top: -65px;
+    right: -50px;
+    width: 30%;
+  }
+
+  .antique_paper_top_green_right img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+
+  .antique_paper_top_green_right {
+    position: absolute;
+    top: -55px;
+    right: -50px;
+    width: 30%;
+  }
+
+  .antique_paper_bottom_green_left {
+    position: absolute;
+    bottom: 0%;
+    left: -5%;
+    width: 30%;
+  }
+
+  .antique_paper_bottom_bird {
+    bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .antique_paper_top_green_right {
+    top: -45px;
+    right: -30px;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .antique_paper_top_green_right {
+    top: -35px;
+    right: -24px;
+  }
+
+}
+
+/* --------------------------------------
+
+  ナビゲーション
+
+--------------------------------------- */
+
+/* -----------------------------------------
+PC
+----------------------------------------- */
+
+.navi_sp {
+  display: none;
+}
+
+.navi_ul {
+  background-image: url(/img/theme_antique/antique_sidenavi_middle.png);
+  background-repeat:repeat-y;
+  background-size: 273px 119px;
+  -webkit-background-size: 273px 119px;
+  -moz-background-size: 273px 119px;
+  position: relative;
+}
+
+ul.navi_ul li {
+  padding: 0;
+  margin: 0 auto;
+  width: 220px;
+  display: table;
+  padding: 16px 0 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1003;
+}
+
+ul.navi_ul li:first-child {
+  padding: 0 0 10px;
+}
+
+ul.navi_ul li a {
+  vertical-align: middle;
+  display: table-cell;
+  line-height: normal;
+  padding: 0 10px 5px;
+}
+
+ul.sub_navi {
+  margin: 0 10px 20px;
+}
+
+ul.navi_ul ul.sub_navi li {
+  font-weight: bold;
+  padding: 0;
+  width: 220px;
+  margin: 0 0 5px 10px;
+  text-align: center;
+}
+
+.navi_pc {
+  margin: 0 7px 0 3px;
+}
+
+.active {
+  color: #8b0c0c !important;
+}
+
+.accordion {
+  display: none;
+}
+
+.navi_parts_detail {
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+/* -----------------------------------------
+タブレット
+----------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+  .accordion {
+    display: block;
+    margin: 0 0 30px 0;
+  }
+
+  .navi_sp_li{
+   list-style: none;
+   text-align: center
+  }
+
+  .navi_menu {
+    background-color: #3F260D;
+    padding: 10px 20px;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+  }
+
+  ul.accordion{
+    width:100%;
+    overflow: hidden;
+  }
+
+  ul.navi_sp{
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+    background: #fff;
+  }
+
+  ul.navi_sp li p{
+   background: fff;
+   padding:10px 20px;
+   cursor: pointer;
+  }
+
+  .navi_title {
+    float: left;
+    text-align: left;
+    padding: 10px 20px;
+  }
+
+  .navi_chevron {
+    text-align: right;
+  }
+}
+
+/* -----------------------------------------
+スマートフォン
+----------------------------------------- */
+
+@media screen and (max-width: 640px) {
+
+  .accordion {
+    display: block;
+    margin: 0 0 30px 0;
+  }
+
+  .navi_sp_li {
+   list-style: none;
+   text-align: center;
+  }
+
+  .navi_menu {
+    background-color: #3F260D;
+    padding: 10px 20px;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+  }
+
+  ul.accordion{
+    width:100%;
+    overflow: hidden;
+  }
+
+  ul.navi_sp{
+    display: none;
+    width: 90%;
+    margin: 5px auto 0;
+  }
+
+  .navi_title {
+    float: left;
+    text-align: left;
+    padding: 10px 20px;
+  }
+
+  .navi_chevron {
+    text-align: right;
+    padding: 10px 20px;
+  }
+
+  .navi_sp li:last-child {
+    border: none;
+    margin: 0;
+  }
+}
+
+/* --------------------------------------
+
+  サイドバー
+
+--------------------------------------- */
+
+/* -----------------------------------------
+PC
+----------------------------------------- */
+
+ #sidebar {
+  width: 273px;
+  margin: 0 auto;
+ }
+
+.sidebar_paper {
+  background-image: url(/img/theme_antique/antique_sidebar_top.png),url(/img/theme_antique/antique_sidebar_bottom.png);
+  background-repeat:no-repeat, no-repeat;
+  background-position: left top,left bottom;
+  background-size: 100%;
+  background-size: 273px 39px,273px 40px;
+  -webkit-background-size: 273px 39px,273px 40px;
+  -moz-background-size: 273px 39px,273px 40px;
+  text-align: center;
+  padding: 39px 0 40px;
+  position: relative;
+  margin: 0 0 20px 0;
+}
+
+.sidebar_paper_inner {
+  background-image: url(/img/theme_antique/antique_sidebar_middle.png);
+  background-repeat:repeat-y;
+  background-size: 273px 119px;
+  -webkit-background-size: 273px 119px;
+  -moz-background-size: 273px 119px;
+  width: 273px;
+  position: relative;
+}
+
+.sidebar_contents_box {
+  padding: 20px 0 5px;
+}
+
+.today_schedule {
+  margin: 0 20px 30px;
+}
+
+.today_area_today {
+  padding: 10px 0 10px 0;
+}
+
+.qr_counter_area {
+  text-align: left;
+}
+
+.side_title {
+  margin: 0 7px 0 3px;
+}
+
+.navi_parts_detail img{
+  max-width: 212px;
+}
+
+.today_schedule_title a{
+  color: #3F260D;
+}
+
+.today_schedule_body a{
+  color: #3F260D;
+}
+
+/* -----------------------------------------
+タブレット
+----------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+  #sidebar {
+    width: 1000px;
+    width: 100%
+  }
+
+  .today_title {
+    width: 100%;
+  }
+
+  .counter_title {
+    width: 100%;
+  }
+
+  .today_area {
+    float: left;
+  }
+
+  .counter_area {
+    float: left;
+  }
+
+  .qr_area_mobile {
+    display: none;
+  }
+
+  .navi_parts_detail img{
+    max-width: 100%;
+  }
+}
+
+/* -----------------------------------------
+スマートフォン
+----------------------------------------- */
+
+@media screen and (max-width: 640px) {
+
+  #sidebar {
+    margin: 0 auto;
+  }
+
+  .today_area {
+    float: none;
+  }
+
+  .counter_area {
+    float: none;
+  }
+
+  .navi_parts_detail img{
+    max-width: 100%;
+  }
+}
+
+/* --------------------------------------
+
+  トップ
+
+--------------------------------------- */
+
+/* -----------------------------------------
+PC
+----------------------------------------- */
+
+.slideshow {
+  position: relative;
+  background-image: url(/img/theme_antique/antique_frame_top.png),url(/img/theme_antique/antique_frame_bottom.png);
+  background-repeat:no-repeat, no-repeat;
+  background-position: center top,center bottom;
+  background-size: 100%;
+  text-align: center;
+  padding: 27px 0 35px;
+  z-index: 1000;
+  margin: 0 0 30px 0;
+}
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  margin-bottom: 15px;
+  background-image: url(/img/theme_antique/antique_frame_middle.png);
+  background-repeat:repeat-y;
+  background-size: 100%;
+  background-position: center top;
+  padding: 90px 30px 100px;
+}
+
+.rslides li {
+  width: 100%;
+}
+
+.rslides li img {
+  width: 549px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.caption {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  line-height: 1.2em;
+  width: 88.3%;
+  margin: 0 auto;
+  padding: 10px 0 5px;
+}
+
+.caption_txt {
+  display: block;
+  padding: 0 10px;
+  text-align: center;
+  text-shadow: 0px 0px 12px rgba(10, 10, 10, 1);
+}
+
+.events {
+  list-style: none;
+}
+
+.callbacks_container {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0 0 30px;
+}
+
+.callbacks {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.callbacks li {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.callbacks img {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: auto;
+  width: 100%;
+  border: 0;
+}
+
+.callbacks_nav {
+  display: none;
+}
+
+.callbacks_nav:active {
+  opacity: 1.0;
+}
+
+.callbacks_nav.next {
+  left: auto;
+  background-position: right top;
+  right: 10px;
+}
+
+#slider_pager {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 30px;
+}
+
+#slider_pager li {
+  font-size: 15px;
+  margin-right: 10px;
+  display: inline;
+}
+
+#slider_pager li a {
+  color: #957c62;
+  text-decoration: none;
+}
+
+#slider_pager li.callbacks_here a {
+  color: #8b0c0c;
+}
+
+.top_main_area {
+  position: relative;
+  text-align: center;
+  margin: 0;
+}
+
+.top_main_area_stamp {
+  position: absolute;
+  top: -200px;
+  left: -20px;
+}
+
+.top_main_area h2 {
+}
+
+.welcome_area_message {
+  background: url(/img/theme_antique/antique_underline.png);
+  line-height: 40px !important;
+  background-size: 634px 40px;
+  -webkit-background-size: 634px 40px;
+  -moz-background-size: 634px 40px;
+}
+
+.top_info_area {
+  background-image: url(/img/theme_antique/antique_top_info_top.png),url(/img/theme_antique/antique_top_info_bottom.png);
+  background-repeat:no-repeat, no-repeat;
+  background-position: left top,left bottom;
+  background-size: 100%;
+  padding: 47px 0 42px;
+}
+
+.top_info_area_inner {
+  background: url(/img/theme_antique/antique_top_info_middle.png) repeat-y;
+  background-size: 100%;
+  padding: 10px 0 0 0;
+}
+
+.top_info_area_inner ul {
+  text-align: left;
+  margin: 0 50px;
+}
+
+.top_info_date {
+  margin: 0 7px 0 0;
+}
+
+/* -----------------------------------------
+タブレット
+----------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+  .slideshow {
+    width: 100%;
+    padding: 4.2% 0 5.4%;
+  }
+
+  .rslides {
+    width: 100%;
+    max-width: 100% !important;
+  }
+
+  .rslides li {
+    width: 100%;
+  }
+
+  .rslides li img {
+    width: 90%;
+  }
+
+  .callbacks_container {
+    margin: 0 0 20px;
+  }
+
+  .caption {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .caption_txt {
+    display: block;
+    padding: 0 15px;
+  }
+
+  #slider_pager {
+    width: 100%;
+    text-align: center;
+    margin: 20px auto 20px;
+  }
+
+  .welcome_area_photo img{
+    margin: 0 0 30px;
+  }
+
+  .top_info_area {
+    width: 100%;
+  }
+
+  .top_info_area {
+    padding: 7.4% 0 6%;
+  }
+
+  .top_main_area_stamp {
+    left: -35px;
+  }
+
+  .top_main_area_stamp img {
+    max-width: 90%;
+  }
+}
+
+/* -----------------------------------------
+スマートフォン
+----------------------------------------- */
+
+@media screen and (max-width: 640px) {
+
+  .slideshow {
+    width: 100%;
+  }
+
+  .rslides li {
+    width: 100%;
+  }
+
+  .rslides li img {
+    max-width: 96%;
+  }
+
+  .rslides {
+    margin: 0 auto;
+  }
+
+  .callbacks_container {
+    margin: 0 0 20px;
+  }
+
+  .caption_txt {
+    display: block;
+    font-size: 11px;
+    line-height: 1.1em;
+    padding: 2px 2% 2px;
+  }
+
+  .callbacks_nav {
+    display: none;
+  }
+
+  .caption {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #slider_pager {
+    width: 100%;
+    text-align: center;
+    margin: 20px auto 20px;
+    position: relative;
+    z-index: 100;
+  }
+
+  .top_main_area h2 {
+    font-size: 25px;
+  }
+
+  .top_info_area_inner ul {
+    margin: 0 40px;
+  }
+
+  .top_main_area_stamp {
+    top: -120px;
+    left: -150px;
+  }
+
+  .top_main_area_stamp img {
+    width: 30%;
+  }
+}
+
+/* --------------------------------------
+
+  インフォメーション
+
+--------------------------------------- */
+
+/* -----------------------------------------
+PC
+----------------------------------------- */
+
+.info_title_span {
+  line-height: 1.7em;
+  padding: 0 0 5px 0;
+}
+
+.info_title_a {
+  padding: 0 0 5px 0;
+}
+
+.info_text a{
+  color: #3F260D;
+}
+
+/* --------------------------------------
+
+  フォトギャラリー
+
+--------------------------------------- */
+
+/* -----------------------------------------
+PC
+----------------------------------------- */
+
+.photo_thumb a {
+  margin: 0 21px 30px 0px;
+  position: relative;
+  display: block;
+  float: left;
+  max-width: 98%;
+  height: auto;
+  border: 4px solid #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 8px 2px;
+}
+
+.photo {
+  width: 100%;
+  margin: 0 5px 40px 0;
+}
+
+.photo_date {
+  text-align: left;
+  margin-bottom: 4px;
+  padding: 0 1px 0 1px;
+}
+
+.photo_title {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  padding: 0 1px;
+}
+
+/* -----------------------------------------
+タブレット
+----------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+  .album {
+    margin: 0;
+    padding: 0 0 13px 0;
+  }
+
+  .album:last-child {
+    padding: 0 0 12px 0;
+  }
+
+  .album img {
+  /*  margin: 0 13px 13px 0;*/
+  }
+
+  .photo_image img {
+    max-width: 100%;
+  }
+}
+
+/* -----------------------------------------
+スマートフォン
+----------------------------------------- */
+
+@media screen and (max-width: 640px) {
+
+  .album_title {
+    margin-bottom: 30px;
+    color: #fff !important;
+  }
+
+  .album {
+    margin: 0;
+    padding: 0 0 13px 0;
+  }
+
+  .album:last-child {
+    padding: 0 0 12px 0;
+  }
+
+  .photo_thumb a {
+    float: left;
+    width: 55px;
+    height: auto;
+  }
+}
+
+/* --------------------------------------
+
+  カレンダー
+
+--------------------------------------- */
+
+/* -----------------------------------------
+PC
+----------------------------------------- */
+
+.calendar_header {
+  font-size: 16px;
+  text-align: center;
+}
+
+.calendar_header a {
+  margin: 0 20px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.table_calendar th {
+  text-align: center;
+  font-size: 12px;
+  border-bottom: 1px solid #9a968b;
+  padding: 0 0 5px 0;
+}
+
+.table_calendar th.sun {
+  color: #ff3355;
+}
+
+.table_calendar th.sat {
+  color: #0250d0;
+}
+
+.table_calendar td {
+  border-bottom: 1px solid #9a968b;
+  border-left: 1px solid  #9a968b;
+  width: 14%;
+  height: 90px;
+  text-align: center;
+  padding: 0 0 5px 0;
+}
+
+.table_calendar td img {
+  padding: 15px;
+}
+
+.table_calendar td.sat {
+  border-right: 1px solid #848484;
+}
+
+.table_calendar td p.day {
+  line-height: 14px;
+  margin: 10px 10px 0;
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table_calendar td.sun p.day {
+  color: #ff3355;
+}
+
+.table_calendar td.sat p.day {
+  color: #0250d0;
+}
+
+.schedule_area {
+  margin: 20px 0 0 0;
+}
+
+.schedule ul {
+  list-style: none;
+}
+
+.schedule ul li {
+  margin: 0 0 10px 0;
+  line-height: 20px;
+}
+
+.schedule_category {
+  padding: 8px 10px 5px;
+  line-height: 20px;
+  margin:0 10px 0 0;
+  font-size: 10px;
+  color: #fff;
+  background: #5c5c55;
+}
+
+.schedule_detail_body {
+  line-height: 1.5;
+}
+
+.schedule_detail_body img {
+  margin: 0 0 30px 0;
+}
+
+.schedule_detail_body a{
+  color: #3F260D;
+}
+
+/* -----------------------------------------
+タブレット・スマートフォン
+----------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+  .calendar_area {
+    padding-top: 10px;
+  }
+
+  .calendar_header {
+    font-size: 14px !important;
+    margin: 0 0 30px 0;
+  }
+
+  .calendar_header a{
+    margin: 0 10px;
+    font-size: 12px !important;
+  }
+
+  .table_calendar td {
+    height: 60px;
+  }
+
+  .table_calendar td img {
+    padding: 10px 0 0;
+  }
+}
+
+/* -----------------------------------------
+スマートフォン
+----------------------------------------- */
+
+@media screen and (max-width: 640px) {
+
+  .table_calendar td {
+    font-size: 11px;
+  }
+}
+
+/* --------------------------------------
+
+  メニュー
+
+--------------------------------------- */
+
+/* -----------------------------------------
+PC
+----------------------------------------- */
+
+.menu_list {
+  background-image: url(/img/theme_antique/antique_contents_underline.png);
+  background-repeat:no-repeat;
+  background-position: center bottom;
+  background-size: 634px 4px;
+}
+
+.menu_list:last-child {
+  background-image: none;
+}
+
+.menu_photo {
+  float: left;
+  margin: 0 0 20px 0;
+}
+
+.menu_text {
+  float: left;
+  margin: 15px;
+}
+
+.info_title_span span {
+  color: #8b0c0c;
+}
+
+.menu_photo img{
+  width: 250px;
+}
+
+
+/* -----------------------------------------
+スマートフォン
+----------------------------------------- */
+
+@media screen and (max-width: 640px) {
+
+  .menu_photo img {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .menu_photo {
+    float: none;
+    margin: 0 0 10px;
+  }
+}
+
+
+/* --------------------------------------
+
+  クーポン
+
+--------------------------------------- */
+
+/* -----------------------------------------
+PC
+----------------------------------------- */
+
+.coupon_qr {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+/* --------------------------------------
+
+  店舗情報
+
+--------------------------------------- */
+
+/* -----------------------------------------
+PC
+----------------------------------------- */
+
+.map {
+  width: 95%;
+  margin: 10px auto 30px;
+  padding: 0;
+  border: 6px solid #fff;
+  box-shadow:rgba(0, 0, 0, 0.65098) 0px 7px 7px -6px;
+  -webkit-box-shadow:rgba(0, 0, 0, 0.65098) 0px 7px 7px -6px;
+  -moz-box-shadow:rgba(0, 0, 0, 0.65098) 0px 7px 7px -6px;
+}
+
+.detail {
+  margin: 0 0 40px 0;
+}
+
+.table_detail {
+  width: 100%;
+}
+
+.table_detail tr {
+  background-image: url(/img/theme_antique/antique_contents_underline.png);
+  background-repeat:no-repeat;
+  background-position: center bottom;
+  background-size: 634px 2px;
+}
+
+.table_detail th {
+  width: 150px;
+  text-align: left;
+  white-space: normal;
+  padding: 15px 20px;
+  font-weight: 700;
+}
+
+.table_detail td {
+  width: 350px;
+  white-space: normal;
+  padding: 15px 20px;
+  vertical-align: top;
+}
+
+/* -----------------------------------------
+タブレット・スマートフォン
+----------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+  .map {
+    width: 98%;
+    margin: 0 auto 20px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+
+  .table_detail th {
+    width: 30%;
+    padding: 15px 10px;
+  }
+
+  .table_detail td {
+    width: 65%;
+    padding: 15px 10px;
+  }
+}
+
+/* --------------------------------------
+
+  お問い合わせ
+
+--------------------------------------- */
+
+/* -----------------------------------------
+PC
+----------------------------------------- */
+
+.contact_message {
+  margin: 0 0 40px 0;
+  font-size: 15px;
+  line-height: 23px;
+}
+
+.contact_area {
+  width: 400px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.contact_area span:last-child {
+  margin: 0 0 50px 0;
+}
+
+.contact_area input {
+  margin: 5px 5px 0 0;
+  padding: 10px;
+  height: 25px;
+  font-size: 14px;
+  vertical-align: middle;
+  border: 1px solid #b4b4b4;
+  background: #fff;
+  width: 100%;
+}
+
+.contact_area textarea {
+  margin: 5px 0 0 0;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #b4b4b4;
+  background: #fff;
+  vertical-align: middle;
+  width: 100%;
+  height: 150px;
+}
+
+.contact_area {
+  margin-bottom: 20px;
+  clear: left;
+}
+
+.contact_area .button_area {
+  text-align: right;
+}
+
+.contact_area input.button {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px;
+  background: #8b0c0c;
+  text-decoration: none;
+  width: 250px;
+  height: 50px;
+  margin: 60px auto 40px;
+  cursor: pointer;
+  border: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.contact_area input.button:hover {
+  background: #651b1b;
+}
+
+input.contact_small {
+  width: 250px;
+}
+
+input.contact_medium {
+  width: 378px;
+}
+
+input.contact_large {
+  height: 150px;
+  width: 378px;
+}
+
+.checkbox {
+  display: block;
+  clear: both;
+  padding: 0 0 5px 0;
+}
+
+.checkbox input {
+  display: inline;
+  float: left;
+  margin: 0 5px 0 0;
+  padding: 5px;
+  width: 13px;
+  border: none;
+}
+
+.checkbox label {
+  display: block;
+  width: 370px;
+  float: left;
+  margin: 0 0 5px 0;
+}
+
+.radio {
+  display: block;
+  clear: both;
+  padding: 5px 0 5px 3px;
+}
+
+.radio input {
+  display: inline;
+  float: left;
+  margin: 0 5px 0 0;
+  padding: 5px;
+  width: 13px;
+  border: none;
+}
+
+.radio span {
+  display: block;
+  width: 370px;
+  float: left;
+  margin: 0 0 5px 0;
+}
+
+.personal_info {
+  width: 100%;
+  margin: 1px 0 0 0;
+}
+
+.personal_info_txt {
+  margin: 8px 0 0 0;
+  font-weight: normal;
+  line-height: 160%;
+  font-size: 12px;
+}
+
+/* -----------------------------------------
+タブレット・スマートフォン
+----------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+  .contact_area {
+    text-align: left;
+    margin: 0 auto 20px;
+  }
+
+  .contact_area input {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .contact_area textarea {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .checkbox input {
+    width: 5%;
+  }
+
+  .checkbox label {
+    width: 90%;
+  }
+
+  .radio input {
+    width: 5%;
+  }
+
+  .radio span {
+    width: 90%;
+  }
+  }
+
+  @media screen and (max-width: 640px) {
+  .contact_area {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------
+
+    予約ページ
+
+--------------------------------------- */
+
+/* -----------------------------------------
+PC
+----------------------------------------- */
+
+.reservation_area {
+  width: 400px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.reservation_message {
+  margin: 0 0 40px 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 23px;
+  color: #8b0c0c;
+}
+
+.reservation_form .reservation_area label {
+  margin: 0 0 5px 0;
+}
+
+.reservation_form .reservation_area input {
+  margin: 5px 5px 0 0;
+  padding: 10px;
+  height: 25px;
+  font-size: 14px;
+  vertical-align: middle;
+  border: 1px solid #cfcfcf;
+  background: #fafafa;
+  width: 100%;
+}
+
+.reservation_form .reservation_area span.radio input {
+  margin: 1px 5px 0 0;
+  padding: 10px;
+  height: 20px;
+  font-size: 14px;
+  vertical-align: middle;
+  width: 20px;
+}
+
+.reservation_form .reservation_area textarea {
+  margin: 5px 0 0 0;
+  padding: 10px;
+  font-size: 14px;
+  vertical-align: middle;
+  border: 1px solid #bfbfbf;
+  background: #fafafa;
+  height: 150px;
+}
+
+.reservation_form .reservation_area {
+  margin-bottom: 20px;
+}
+
+.reservation_form .reservation_memo {
+  width: 100%;
+  height: 100px;
+}
+
+.reservation_area .button_area {
+  text-align: left;
+}
+
+.reservation input.button {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px;
+  background: #8b0c0c;
+  text-decoration: none;
+  width: 250px;
+  height: 50px;
+  margin: 60px auto 0px;
+  cursor: pointer;
+  border: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.reservation input.button:hover {
+  background: #651b1b;
+}
+
+.reservation_form .reservation_small {
+  width: 200px;
+}
+
+.reservation_form .reservation_medium {
+  width: 200px;
+}
+
+.reservation_form .reservation_large {
+  height: 200px;
+  width: 370px;
+}
+
+.reservation_info {
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+
+.reservation_info .reservation_tel_number {
+  color: #6a6a6a;
+  font-family: 'Mplus 1p';
+  font-size: 18px;
+  padding: 3px 5px 5px 0;
+}
+
+.reservation_tel_time {
+  padding: 0;
+}
+
+.reservation_others {
+  margin-bottom: 40px;
+}
+
+.reservation_photo img {
+  max-width: 700px;
+}
+
+.reservation_title {
+  font-size: 14px;
+}
+
+.reservation_course_body p {
+  margin: 20px 0;
+}
+
+.pager {
+  text-align: center;
+  white-space: nowrap;
+  padding: 5px 7px;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'Mplus 1p';
+}
+
+.pager a {
+  margin: 0 2px;
+  padding: 5px 7px;
+  color: #3F260D;
+  text-decoration:;
+}
+
+/* -----------------------------------------
+タブレット・スマートフォン
+----------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+  .reservation_form .reservation_area input {
+    padding: 10px 0;
+    width: 100%;
+    height: 1em;
+  }
+
+  .reservation_form .reservation_area textarea {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .reservation_photo img {
+    max-width: 100%;
+  }
+
+  .reservation_form .button_area {
+    text-align: center;
+  }
+  }
+
+  @media screen and (max-width: 640px) {
+  .reservation_area {
+    width: 100%;
+  }
+
+  .reservation input.button {
+    margin: 60px auto 100px;
+  }
+}
+
+
+/* --------------------------------------
+
+  フッター
+
+--------------------------------------- */
+
+/* -----------------------------------------
+PC
+----------------------------------------- */
+
+.footer_top_line {
+  height: 65px;
+  background: url(/img/theme_antique/antique_footer_bg_01.png) ;
+  background-size:1335px 65px;
+  -webkit-background-size: 1335px 65px;
+  -moz-background-size: 1335px 65px;
+}
+
+#footer_inner {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.shop_title_footer {
+  margin: 0 0 30px 0;
+}
+
+.site_logo_footer {
+  display: block;
+  font-size: 24px;
+}
+
+.site_logo_footer a {
+  color: #fff;
+}
+
+.powered_inner {
+  width: 100%;
+}
+
+.powered_rss {
+  text-align: center;
+  width: 100%;
+}
+
+.shop_rss {
+  margin: 4px 0 0 5px;
+}
+
+.shop_name_sp {
+  display: none;
+}
+
+.navi_footer {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.navi_inner {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.navi_footer li{
+  padding: 10px 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.navi_icon_footer {
+  margin: 0 3px;
+}
+
+
+/* -----------------------------------------
+タブレット
+----------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+  #footer_inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .navi_footer {
+    display: block;
+  }
+
+  .navi_inner {
+    width: 100%;
+  }
+
+  .site_logo_footer {
+    display: block;
+  }
+
+  .site_logo_small img{
+    width: 230px;
+  }
+
+  .shop_name_sp {
+    display: block;
+  }
+}
+
+
+/* -----------------------------------------
+スマートフォン
+----------------------------------------- */
+
+@media screen and (max-width: 640px) {
+
+  #footer_inner {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .shop_name_sp {
+    display: block;
+  }
+}
+
+/* --------------------------------------
+  ソーシャルアイコン
+--------------------------------------- */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('/css/social-icon-fonts/social-icon.eot?3koa62');
+    src: url('/css/social-icon-fonts/social-icon.eot?3koa62#iefix') format('embedded-opentype'),
+         url('/css/social-icon-fonts/social-icon.ttf?3koa62') format('truetype'),
+         url('/css/social-icon-fonts/social-icon.woff?3koa62') format('woff'),
+         url('/css/social-icon-fonts/social-icon.svg?3koa62#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+
+.icon-twitter:before {
+    content: "\e902";
+    margin: 0 4px 0 0;
+    }
+
+.icon-facebook:before {
+    content: "\e901";
+    margin: 0 5px 0 0;
+    }
+
+.icon-instagram:before {
+    content: "\e900";
+    }
+
+.social_wrap {
+    font-size: 20px;
+    margin: 20px 0 0 0;
+    }
+
+.line-it-button {
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .social_widget {
+    text-align: left;
+  }
+}
+
+/* -----------------------------------------
+WYSIWYG出力要素style
+----------------------------------------- */
+
+.top_main_area li,
+.info_text li,
+.menu_text li,
+.photo_body li,
+.schedule_detail_body li,
+.free_area li,
+.today_schedule_body li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.top_main_area ol li,
+.info_text ol li,
+.menu_text ol li,
+.photo_body ol li,
+.schedule_detail_body ol li,
+.free_area ol li,
+.today_schedule_body ol li {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+/* --------------------------------------
+    custom staff
+--------------------------------------- */
+
+  #staff .staff_wrap {
+    width: 100%;
+    margin-bottom: 30px;
+    word-break: break-all;
+    float: left;
+  }
+
+  #staff .staff--image {
+    margin-right: 4%;
+    float: left;
+    width: 27%;
+    border: 4px solid #fff;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 8px 2px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 8px 2px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  #staff .staff--image::before {
+    content: '';
+    display:block;
+    padding-top:100%;
+  }
+
+  #staff .staff__text {
+    float: left;
+    width: 65%;
+  }
+
+  #staff .staff__text--name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  #staff .staff__text--job {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  #staff
+   .staff__text--description {
+    margin-bottom: 25px;
+  }
+
+  #staff .staff__text--social a {
+    letter-spacing: .5px;
+    margin: 0 14px 10px 0;
+    display: block;
+    float: left;
+  }
+
+    #staff .staff__text--social a:link {
+    text-decoration: none;
+  }
+
+  #staff .staff__text--social a:visited {
+    text-decoration: none;
+  }
+
+  #staff .staff__text--social a:hover {
+    text-decolation: none;
+    opacity: .7;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  #staff .staff__text--social a:active {
+    text-decoration: none;
+  }
+
+  #staff .staff__text--social_icon img {
+    width: 20px;
+  }
+
+/* --------------------------------------
+tooltip
+--------------------------------------- */
+
+.hotspot {
+  cursor: pointer;
+}
+
+#tt {
+  position: absolute;
+  display: block;
+  background: url(/img/tooltip/tt_left.gif) top left no-repeat;
+  z-index: 9999;
+}
+
+#tttop {
+  display: block;
+  height: 5px;
+  margin-left: 5px;
+  background: url(/img/tooltip/tt_top.gif) top right no-repeat;
+  overflow: hidden;
+}
+
+#ttcont {
+  display: block;
+  padding: 2px 12px 3px 7px;
+  margin-left: 5px;
+  background: #ccc;
+  color: #333;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+#ttcont div.schedule_title {
+  font-size: 13px;
+}
+
+#ttcont div.schedule_body {
+  font-size: 11px;
+}
+
+#ttbot {
+  display: block;
+  height: 5px;
+  margin-left: 5px;
+  background: url(/img/tooltip/tt_bottom.gif) top right no-repeat;
+  overflow: hidden;
+}
+
+/* --------------------------------------
+  colorbox
+--------------------------------------- */
+
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/*
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:#fff;}
+#colorbox{outline:0;}
+#cboxContent{margin-top:32px; overflow:visible;}
+.cboxIframe{background:#fff;}
+#cboxError{padding:50px; border:1px solid #ccc;}
+#cboxLoadedContent{padding:1px;}
+#cboxLoadingGraphic{background:url(/img/theme_simple2/loading.gif) no-repeat center center;}
+#cboxLoadingOverlay{background:#000;}
+#cboxTitle{position:absolute; top:-22px; left:0; color:#000;}
+#cboxCurrent{position:absolute; top:-22px; right:205px; text-indent:-9999px;}
+
+/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; text-indent:-9999px; width:20px; height:20px; position:absolute; top:-20px; background:url(/img/theme_simple2/controls.png) no-repeat 0 0;}
+
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+#cboxPrevious{background-position:0px 0px; right:44px;}
+#cboxPrevious:hover{background-position:0px -25px;}
+#cboxNext{background-position:-25px 0px; right:22px;}
+#cboxNext:hover{background-position:-25px -25px;}
+#cboxClose{background-position:-50px 0px; right:0;}
+#cboxClose:hover{background-position:-50px -25px;}
+.cboxSlideshow_on #cboxPrevious, .cboxSlideshow_off #cboxPrevious{right:66px;}
+.cboxSlideshow_on #cboxSlideshow{background-position:-75px -25px; right:44px;}
+.cboxSlideshow_on #cboxSlideshow:hover{background-position:-100px -25px;}
+.cboxSlideshow_off #cboxSlideshow{background-position:-100px 0px; right:44px;}
+.cboxSlideshow_off #cboxSlideshow:hover{background-position:-75px -25px;}
+.web-font {
+  font-family: 'Mplus 1p';
+}

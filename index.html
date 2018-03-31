@@ -1,0 +1,853 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>{site_title_sub2}{site_title}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />
+  <meta name="keywords" content="{site_keywords}" />
+  <meta name="description" content="{page_summary}" />
+  <meta property="og:title" content="{site_og_title}" />
+  <meta property="og:image" content="{site_og_image}" />
+  <meta property="og:site_name" content="{site_title}" />
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  {favicon_url}
+  <link rel="alternate" type="application/rss+xml" title="{site_title} / RSS" href="{site_rss}" />
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Cookie|Special+Elite' type='text/css'>
+  <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{site_css}">
+
+  <script type="text/javascript" src="/assets/jquery/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="/js/theme_antique/init.js?20160923"></script>
+</head>
+
+
+<body id="{body_id}">
+  <div id="container">
+
+  <!-- smartphone_gnav/ -->
+  <nav id="main-nav">
+    <ul class="gnav_smart_phone">
+      <!-- BEGIN side_navi_list -->
+      <li class="font_16 mar_btm_20 bold">
+        <a href="{side_navi_url}" {side_navi_target} class="{side_navi_class}">{side_navi_title}</a>
+      </li>
+      <!-- END side_navi_list -->
+    </ul>
+  </nav>
+  <!-- /smartphone_gnav -->
+
+  <div class="top_line">
+    <div class="antique_header_ivy">
+      <img src="/img/theme_antique/antique_header_ivy.png" alt="" />
+    </div>
+  </div>
+
+<div id="wrapper">
+
+  <!-- ヘッダー部分ここから // -->
+  <div id="header" class="clearfix">
+
+    <!-- tel_area/ -->
+    <div class="tel_area font_20 clearfix white">
+      <nav id="mobile-bar" class="white"></nav>
+      <div class="tel_mail clearfix">
+        <div class="tel_number shop_tel">
+          <a href="tel:{tel}" class="shop_tel_link"><img src="/img/theme_antique/antique_phone_icon.png" width="40" alt="" />{tel}</a>
+        </div>
+        <a class="tel_area_mail link_white font_16" href="{site_url}/contact">
+          <div class="tel_area_mail_txt"><img src="/img/theme_antique/antique_mail_icon.png" width="40" alt="" />Contact</div>
+        </a>
+        <!-- スマホ用お問い合わせ -->
+        <a class="tel_area_mail_mobile color_bg_01 border_radius" href="{site_url}/contact">
+          <div><i class="fa fa-envelope-o"></i></div>
+        </a>
+      </div>
+    </div>
+    <!-- /tel_area -->
+
+    <!-- site_title/ -->
+    <div class="site_title center">
+      <h1 class="site_logo color_01 bold"><a href="{site_url}">{site_logo}</a></h1>
+      <div class="site_description font-16">{site_description}</div>
+    </div>
+    <!-- /site_title -->
+
+  </div>
+  <!-- // ヘッダー部分ここまで -->
+
+  <!-- コンテンツ部分ここから // -->
+  <div id="contents" class="clearfix">
+
+    <!-- メイン部分ここから -->
+    <div id="main">
+      <div class="main_inner">
+
+      <!-- BEGIN top -->
+      <!----------------------------------------------
+
+        ページ：トップ
+
+      ---------------------------------------------->
+
+      <!-- BEGIN slideshow -->
+      <script>
+        $(function() {
+          //pagerの設定
+          var cnt=0;
+          $(".rslides li").each(function() {
+              ++cnt;
+          });
+          for (var i = 0; i < cnt; i++) {
+            var pager = "<li><a><i></i></a></li>"
+            $("#slider_pager").append(pager);
+          };
+          $("#slider_pager > li > a").attr("href" , "#");
+          $("#slider_pager > li > a > i").addClass("fa fa-circle");
+
+          //スライドショーの設定
+          $("#slider").responsiveSlides({
+            maxwidth: 640,
+            speed: 700,
+            nav: true,
+            manualControls: '#slider_pager',
+            timeout: {slideshow_time},
+            namespace: "callbacks",
+            before: function () {
+              $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+              $('.events').append("<li>after event fired.</li>");
+            }
+          });
+
+          // スライドショークリックイベント
+          var linkText = '';
+          var $targetParent = $('.slideshow');
+
+          function setLinkText() {
+            $('.rslides li').each(function(e){
+              if($(this).hasClass('callbacks1_on')) {
+                linkText = $(this).find('a').attr('href');
+              }
+            });
+          }
+
+          $targetParent.bind({
+            'mouseenter':function(){
+              setLinkText();
+              if(typeof linkText !== 'undefined') {
+                $(this).css('cursor', 'pointer');
+              }
+            },
+            'mouseleave':function(){
+              $(this).css('cursor', 'default');
+            }
+          }).click(function(){
+            setLinkText();
+            if(typeof linkText !== 'undefined') {
+              window.open(linkText);
+            }
+          });
+
+          $('.rslides li a').click(function(event) {
+              event.stopPropagation();
+          });
+        });
+
+      </script>
+
+      <div class="slideshow">
+        <div class="antique_paper_top_green_right">
+          <img src="/img/theme_antique/antique_green_02.png" alt="" width="277"/>
+        </div>
+        <ul class="rslides {slideshow_part_active}" id="slider">
+          <!-- BEGIN slideshow_parts -->
+          <li>
+            {slideshow_part_image_l_linked}
+            <p class="caption color_brown">
+              <span class="caption_txt">
+                {slideshow_part_comment}
+              </span>
+            </p>
+          </li>
+          <!-- END slideshow_parts -->
+        </ul>
+      </div>
+      <!-- END slideshow -->
+
+      <!-- Slideshow Pager -->
+      <ul id="slider_pager">
+      </ul>
+
+      <div class="top_main_area">
+        <div class="top_main_area_stamp"><img src="/img/theme_antique/antique_stamp.png" width="221" alt="" /></div>
+        <h2 class="welcome_title center mar_btm_30 font_40">Welcome</h2>
+        <div class="mar_btm_20"><img src="/img/theme_antique/antique_welcome_line.png" width="498" alt="" /></div>
+        <div class="welcome_area_message pad_btm_30">
+          <div>{message}</div>
+        </div>
+      </div>
+
+      <div class="top_main_area top_info_area">
+        <div class="top_info_area_inner">
+          <h2 class="mar_btm_30 font_30">Information</h2>
+          <ul class="">
+            <!-- BEGIN top_info_list -->
+            <li class="mar_btm_5 welcome_area_message">
+              <span class="top_info_date main_color">
+                {top_info_date}
+              </span>
+              <a href="{top_info_url}" class="bold">
+                {top_info_title}
+              </a>
+            </li>
+            <!-- END top_info_list -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="welcome_area_photo">
+
+      </div>
+
+      <!-- END top -->
+
+
+      <!-- BEGIN info -->
+      <!----------------------------------------------
+
+        ページ：インフォメーション
+
+      ---------------------------------------------->
+
+      <div>
+        <h2 class="page_title">
+          {page_title}
+        </h2>
+        <div class="autopagerize_page_element">
+          <!-- BEGIN info_list -->
+          <div class="menu_list mar_btm_30">
+            <p class="info_date pad_btm_10">
+              {info_date}
+            </p>
+            <h4 class="info_title pad_btm_20">
+              <span class="info_title_span">
+                <a href="{info_url}" class="info_title_a">
+                  {info_title}
+                </a>
+              </span>
+            </h4>
+            <div class="info_text mar_btm_20">
+              <p class="info_body ">
+                {info_body}
+              </p>
+            </div>
+            <div class="info_pic mar_btm_30 pad_btm_40">
+              <p class="info_photo">
+                {info_photo_o}
+              </p>
+            </div>
+          </div>
+          <!-- END info_list -->
+        </div>
+      </div>
+      <!-- END info -->
+
+      <!-- BEGIN photo -->
+      <!----------------------------------------------
+
+        ページ：フォト
+
+      ---------------------------------------------->
+
+      <div class="photo_area">
+        <h2 class="page_title">
+          {page_title}
+        </h2>
+        <!-- BEGIN photo_album -->
+        <div class="album mar_btm_30">
+          <div class="album_title">
+            <h3 class="mar_btm_30">
+              <a href="{photo_album_url}">
+                {photo_album_name}
+              </a>
+            </h3>
+          </div>
+          <!-- BEGIN photo_album_items -->
+          <div class="photo_thumb">
+            <a href="{photo_url_o}" class="thickbox fade" rel="{photo_album_id}">
+              {photo_image_t}
+            </a>
+          </div>
+          <!-- END photo_album_items -->
+          <br class="clear" />
+        </div>
+        <!-- END photo_album -->
+
+        <!-- BEGIN photo_list -->
+        <h3 class="album_title mar_btm_30">
+          <span>
+            {photo_album_name}
+          </span>
+        </h3>
+        <div class="autopagerize_page_element">
+        <!-- BEGIN photo_list_items -->
+          <div class="photo menu_list">
+            <div class="photo_date">
+              {photo_list_date}
+            </div>
+            <div class="photo_title">
+              {photo_list_title}
+            </div>
+            <div class="photo_image pad_btm_30">
+              {photo_list_image_o}
+            </div>
+            <div class="photo_body pad_btm_30">
+              {photo_list_body}
+            </div>
+          </div>
+        <!-- END photo_list_items -->
+        </div>
+        <!-- END photo_list -->
+
+      </div>
+      <!-- END photo -->
+
+      <!-- BEGIN menu -->
+      <!----------------------------------------------
+
+        ページ：メニュー
+
+      ---------------------------------------------->
+      <div>
+        <h2 class="page_title">
+          {page_title}
+        </h2>
+        <!-- BEGIN menu_list -->
+        <div>
+          <h3 class="mar_btm_30">
+            <span>
+              {menu_category_name}
+            </span>
+          </h3>
+          <!-- BEGIN menu_list_items -->
+          <div class="menu_list mar_btm_30">
+            <div class="clearfix mar_btm_20">
+              <p class="menu_photo">
+                {menu_photo_o}
+              </p>
+              <div class="menu_text">
+                <h4 class="mar_btm_20">
+                  <span class="info_title_span bold">
+                    {menu_recommend}{menu_title}
+                  </span>
+                </h4>
+                <p class="font_16 bold mar_btm_10">
+                  {menu_price}{menu_price_unit}{menu_over_flg}
+                </p>
+                <p class="mar_btm_10">
+                  {menu_body}
+                </p>
+              </div>
+            </div>
+            <br class="clear" />
+          </div>
+          <!-- END menu_list_items -->
+        </div>
+        <!-- END menu_list -->
+      </div>
+      <!-- END menu -->
+
+      <!-- BEGIN calendar -->
+      <!----------------------------------------------
+
+        ページ：カレンダー
+
+      ---------------------------------------------->
+      <!-- BEGIN calendar_month -->
+
+      <div class="calendar_area">
+        <h2 class="page_title">
+          {page_title}
+        </h2>
+        <div class="calendar_header mar_btm_30">
+          {calendar_navi}
+        </div>
+        {calendar}
+        <div class="schedule_area">
+          <!-- BEGIN calendar_schedule -->
+          <a name="{calendar_date}"></a>
+          <div class="schedule mar_btm_20">
+            <div class="schedule_date mar_btm_10 font_16">
+              {schedule_date}
+            </div>
+            <ul>
+              <!-- BEGIN calendar_schedule_items -->
+              <li>
+                <span class="schedule_category center">{schedule_category}</span>
+                <a href="{schedule_url}">
+                  <span class="schedule_time">
+                    {schedule_time}
+                  </span>
+                  <span class="schedule_title bold">
+                    {schedule_title}
+                  </span>
+                </a>
+              </li>
+              <!-- END calendar_schedule_items -->
+            </ul>
+          </div>
+          <!-- END calendar_schedule -->
+        </div>
+        <!-- END calendar_month -->
+
+        <!-- BEGIN schedule_detail -->
+        <div class="schedule_detail">
+          <div class="mar_btm_20">
+            <span class="schedule_category">
+              {schedule_detail_category_name}
+            </span>&nbsp;
+            <span class="schedule_date">
+              {schedule_detail_date}
+            </span>
+          </div>
+          <h4 class="schedule_detail_title mar_btm_20">
+            <span class="">
+              {schedule_detail_title}
+            </span>
+          </h4>
+          <div class="schedule_detail_body">
+            {schedule_detail_photo_o}
+            {schedule_detail_body}
+            <br class="clear" />
+          </div>
+        </div>
+      <!-- END schedule_detail -->
+      </div>
+
+      <!-- END calendar -->
+
+      <!-- BEGIN coupon -->
+      <!----------------------------------------------
+
+        ページ：クーポン
+
+      ---------------------------------------------->
+
+      <div class="coupon_area">
+        <h2 class="page_title">
+          {page_title}
+        </h2>
+        <div class="autopagerize_page_element">
+          <!-- BEGIN coupon_list -->
+          <div class="coupon mar_btm_20">
+            <div class="coupon_image mar_btm_40">
+              {coupon_photo_o}
+            </div>
+            <div class="coupon_body clearfix">
+              <div class="coupon_qr">
+                {coupon_qr_code}
+              </div>
+              <h4 class="coupon_title pad_btm_10">
+                <span class="coupon_title_span ">
+                  <a href="{coupon_url}">
+                    {coupon_title}
+                  </a>
+                </span>
+              </h4>
+              <ul>
+                <li>提示方法：<span>{coupon_teiji}</span></li>
+                <li>利用条件：<span>{coupon_how}</span></li>
+                <li>有効期限：<span>{coupon_date}</span></li>
+              </ul>
+            </div>
+            <br class="clear" />
+          </div>
+          <!-- END coupon_list -->
+        </div>
+        <div class="coupon_print"> &raquo;
+          <a href="{coupon_print_url}" target="_blank">
+            このページを印刷する
+          </a>
+        </div>
+      </div>
+
+      <!-- END coupon -->
+
+      <!-- BEGIN about -->
+      <!----------------------------------------------
+
+        ページ：店舗情報
+
+      ---------------------------------------------->
+
+      <div class="about_area">
+        <h2 class="page_title">
+          {page_title}
+        </h2>
+        <div class="map mar_btm_30">
+          {map}
+        </div>
+        <div class="detail">
+          {about_all}
+        </div>
+      </div>
+      <!-- END about -->
+
+      <!-- BEGIN contact -->
+      <!----------------------------------------------
+
+        ページ：お問い合わせ
+
+      ---------------------------------------------->
+
+      <div class="contact_area">
+        <h2 class="page_title">
+          {page_title}
+        </h2>
+        <div class="form_area_line"></div>
+        <!-- BEGIN contact_message -->
+        <div class="contact_message">
+          {contact_message}
+        </div>
+        <!-- END contact_message -->
+        <form name="frm" method="post" action="{contact_action}">
+          <input type="hidden" name="hash" value="{hash}" />
+          <div class="contact_form">
+            {question}
+          </div>
+          <div class="button_area">
+            <input type="submit" value="メールを送信する" class="button" tabindex="5" />
+          </div>
+        </form>
+        <div class="personal_info">
+          個人情報の保護について <br />
+          <p class="personal_info_txt">
+            インターネットを通じて当ウェブサイトの「お問い合わせ」をご利用いただいた際に、必要な情報の元となるお客様の個人情報の取扱いを行いますが、お客様の個人情報を、お客様の同意なしに第三者に開示することはありません。
+          </p>
+        </div>
+      </div>
+      <!-- END contact -->
+
+      <!-- BEGIN reservation -->
+      <!----------------------------------------------
+
+        ページ：予約ページ
+
+      ---------------------------------------------->
+
+      <div class="reservation_area">
+        <h2 class="page_title">
+          {page_title}
+        </h2>
+        <div class="form_area_line"></div>
+        <!-- BEGIN reservation_form -->
+        <div class="reservation">
+          <!-- BEGIN reservation_message -->
+          <div class="reservation_message">
+            {reservation_message}
+          </div>
+          <!-- END reservation_message -->
+          <form name="frm" method="post" action="{reserve_action}">
+            <input type="hidden" name="hash" value="{hash}" />
+            <div class="reservation_form">
+              {reserve_form}
+            </div>
+              {reserve_button}
+          </form>
+        </div>
+        <!-- END reservation_form -->
+
+        <!-- BEGIN reservation_info -->
+        <div class="reservation_info">
+          <div class="reservation_others">
+             {reservation_others}
+          </div>
+          <div class="reservation_tel_time">
+            <div class="reservation_tel_number">
+              {reservation_header_tel}
+            </div>
+            {reservation_tel_time}
+          </div>
+        </div>
+        <!-- END reservation_info -->
+
+        <!-- BEGIN reservation_list -->
+        <div class="mar_btm_20">
+          <div class="reservation_title mar_btm_10">
+            {reservation_title}
+          </div>
+          <div class="reservation_body">
+            <div class="reservation_photo mar_btm_10">
+              {reservation_photo_m}
+            </div>
+              {reservation_course}
+          </div>
+          <br class="clear" />
+        </div>
+        <!-- END reservation_list -->
+
+      </div>
+      <!-- END reservation -->
+
+      <!-- BEGIN free -->
+      <!----------------------------------------------
+
+       ページ：フリーページ
+
+      ---------------------------------------------->
+      <div class="free_area">
+        <h2 class="page_title">
+          {page_title}
+        </h2>
+          {free_body}
+      </div>
+      <!-- END free -->
+
+      <!-- BEGIN page -->
+        <div class="autopagerize_insert_before"></div>
+        <div class="pager">
+          {pager}
+        </div>
+      <!-- END page -->
+
+    </div>
+    <!-- // main_innerここまで -->
+      <div class="antique_paper_bottom_green_left">
+        <img src="/img/theme_antique/antique_green_03.png" alt="" width="250"/>
+      </div>
+      <div class="antique_paper_bottom_bird">
+        <img src="/img/theme_antique/antique_bird.png" alt="" width="120"/>
+      </div>
+    </div>
+    <!-- // メイン部分ここまで -->
+
+    <!--サイド要素ここから // -->
+    <div id="side">
+      <!-- ナビゲーション部分ここから // -->
+      <div id="navi" class="mar_btm_10 ">
+        <ul class="navi_ul">
+          <!-- BEGIN navi_list -->
+          <li class="cookie font_16 bold center">
+            <a href="{navi_url}" {navi_target} class="{navi_class}">
+              {navi_title}
+            </a>
+          </li>
+          {navi_sub}
+          <div class="sidenavi_underline center">
+            <img src="/img/theme_antique/antique_sidenavi_underline.png" alt="" width="203px"/>
+          </div>
+          <!-- END navi_list -->
+        </ul>
+      </div>
+      <!-- // ナビゲーション部分ここまで -->
+
+      <!-- サイドバー部分ここから // -->
+      <div id="sidebar" class="clearfix">
+
+      <!-- 今日の予定部分ここから // -->
+      <div class="today_area sidebar_paper mar_btm_20 today_area_smartphone">
+        <div class="sidebar_paper_inner">
+          <div class="today_area_today font_20">Today</div>
+          <div class="sidenavi_underline center">
+            <img src="/img/theme_antique/antique_sidenavi_underline.png" alt="" width="203px"/>
+          </div>
+          <div class="sidebar_contents_box">
+            <div class="today_title mar_btm_20 pad_btm_10">{today}</div>
+            <!-- BEGIN today_schedule -->
+            <div class="today_schedule">
+              <div class="today_schedule_title">
+                <a href="{today_schedule_url}">
+                  {today_schedule_time} {today_schedule_title}
+                </a>
+              </div>
+              <div class="today_schedule_body">
+                {today_schedule_body}
+              </div>
+            </div>
+            <!-- END today_schedule -->
+          </div>
+        </div>
+      </div>
+      <!-- // 今日の予定部分ここまで -->
+
+      <!-- カウンター部分ここから // -->
+      <div class="counter_area sidebar_paper">
+        <div class="sidebar_paper_inner">
+          <div class="today_area_today font_20">Counter</div>
+           <div class="sidenavi_underline center">
+            <img src="/img/theme_antique/antique_sidenavi_underline.png" alt="" width="203px"/>
+          </div>
+          <div class="sidebar_contents_box">
+            <div class="counter_today mar_btm_10">
+              Today&nbsp;:&nbsp;<span class="num">{counter_today}</span>
+            </div>
+            <div class="counter_yesterday mar_btm_10">
+              Yesterday&nbsp;:&nbsp;<span class="num">{counter_yesterday}</span>
+            </div>
+            <div class="counter_total mar_btm_10">
+              Total&nbsp;:&nbsp;<span class="num">{counter_total}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // カウンター部分ここまで -->
+
+      <!-- // QRコード部分ここから -->
+      <div class="qr_area qr_area_mobile sidebar_paper mar_btm_20">
+        <div class="sidebar_paper_inner">
+          <div>
+            <div class="today_area_today font_20">Mobile</div>
+          <div class="sidenavi_underline center">
+            <img src="/img/theme_antique/antique_sidenavi_underline.png" alt="" width="203px"/>
+          </div>
+            <div class="sidebar_contents_box">{qr_code}</div>
+          </div>
+        </div>
+      </div>
+      <!-- // QRコード部分ここまで -->
+
+    </div>
+    <!-- // サイドバー部分ここまで -->
+
+      <!-- ナビゲーションパーツここから // -->
+      <div id="navi_parts">
+        {navi_parts}
+      </div>
+      <!-- // ナビゲーションパーツここまで -->
+    </div>
+    <!-- // サイド要素ここまで -->
+  </div>
+  <!-- // コンテンツ部分ここまで -->
+
+</div><!-- // wrapperここまで -->
+
+<!-- フッター部分ここから // -->
+<div class="footer_top_line"></div>
+<div id="footer">
+  <div id="footer_inner">
+    <div class="center fade">
+    </div>
+    <div class="shop_title_footer clearfix center">
+      <div class="shop_info_footer">
+        <h1 class="site_logo_footer fade">
+          <a href="{site_url}" class="site_logo_small fade">
+            {site_title}
+          </a>
+        </h1>
+      </div>
+    </div>
+
+    <!-- // フッターナビ部分ここから -->
+    <div class="navi_footer mar_btm_50">
+      <ul class="navi_inner clearfix">
+        <!-- BEGIN footer_navi_list -->
+        <li>
+          <a href="{footer_navi_url}" {footer_navi_target} class="{footer_navi_class} fade link_white">
+            <span class="white">
+              <i class="fa fa-angle-right navi_icon_footer "></i>{footer_navi_title}
+            </span>
+          </a>
+        </li>
+        <!-- END footer_navi_list -->
+      </ul>
+
+      <div class="social_wrap">
+        <!-- BEGIN twitter_button -->
+        <a href="{twitter_url}" target="_blank" class="fade link_white">
+          <span class="icon-twitter white"></span>
+        </a>
+        <!-- END twitter_button -->
+
+        <!-- BEGIN facebook_button -->
+        <a href="{facebook_url}" target="_blank" class="fade link_white">
+          <span class="icon-facebook white"></span>
+        </a>
+        <!-- END facebook_button -->
+
+        <!-- BEGIN instagram_button -->
+        <a href="{instagram_url}" target="_blank" class="fade link_white">
+          <span class="icon-instagram white"></span>
+        </a>
+        <!-- END instagram_button -->
+      </div>
+
+    </div>
+    <!-- // フッターナビ部分ここまで -->
+
+    <!-- footer_copyright/ -->
+    <div class="center white font_12">
+        <div class="copyright">&copy;{year}
+          <a href="{site_url}" class="fade link_white">{name}</a>. All Rights Reserved.
+          <a class="shop_rss link_white" href="{site_rss}"><i class="fa fa-rss-square fade"></i></a>
+        </div>
+
+        <div class="powered">Powered by <a class="fade" href="{goope_url}">グーペ</a> / <a class="link_white" href="{admin_url}">Admin</a>
+        </div>
+    </div>
+    <!-- /footer_copyright -->
+
+  </div>
+  <!-- // footer_inner -->
+</div>
+<!-- // フッター部分ここまで -->
+
+</div>
+
+  <script type="text/javascript" src="/js/tooltip.js"></script>
+  <script type="text/javascript" src="/assets/responsiveslides/responsiveslides.min.js"></script>
+  <script type="text/javascript" src="/assets/colorbox/jquery.colorbox-min.js"></script>
+  <script type="text/javascript" src="/assets/mobilemenu/mobilemenu.js"></script>
+
+  <script>
+      $(function() {
+          // Android4.4未満判別
+          if( navigator.userAgent.indexOf('Android') > 0 && typeof window.orientation != 'undefined' && typeof(EventSource) == 'undefined') {
+              $('body').addClass('ua-android-u440');
+          }
+
+          //thickbox
+          $("#main").find(".thickbox").colorbox({rel:'thickbox',maxWidth: '98%'});
+
+          // RSS表示制御
+          if($('.shop_rss').css('display') == 'block') {
+              $('.shop_rss').css('display', 'inline');
+          }
+          if($('.powered').css('display') == 'block') {
+              $('.powered').css('display', 'inline');
+          }
+
+          //お問い合わせメニューがない場合、お問い合わせボタンを削除
+          if ($('#navi li').children('.navi_contact').size() == 0) {
+              $('.tel_area_mail').hide();
+          }
+
+          //開閉メニュー
+          $('body').mobile_menu({
+              menu: ['#main-nav ul'],
+              menu_width: 200,
+              prepend_button_to: '#mobile-bar'
+          });
+
+          //星アイコンの入れ替え
+          $('#menu .info_title_span img').css('display' , 'none');
+          $('#menu .info_title_span').prepend('<span>★</span>');
+
+          //slide pagerの削除
+          if ($('.rslides li').length == 1) {
+              $('#slider_pager').css('display' , 'none');
+          }
+          if ($('.rslides li').length == 0) {
+              $('.top_main_area_stamp').css('display' , 'none');
+          }
+
+          //top infoの制御
+          if ($('.top_info_area_inner ul li').length == 0) {
+              $('.top_info_area').css('display' , 'none');
+          }
+      });
+  </script>
+</body>
+</html>
